@@ -4,6 +4,21 @@
     <title></title>
     <script src="/src/jquery.js"></script>
     <script src="/src/jstal.js"></script>
+
+    <script>
+        $.get("/templates/snippet1.tal", function(data){
+        var test = new Jstal(data);
+        test["value"] = {
+            getContent: "alta, wasn stress"
+        };
+        test["title"] = "<b>hui</b>";
+        var html = test.execute();
+        $("body").html(html);
+        });
+
+        // We define our own functions right here
+        JstalEngine.prototype.attributes = function(){}
+    </script>
 </head>
 <body>
 

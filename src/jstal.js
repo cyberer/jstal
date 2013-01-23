@@ -58,15 +58,3 @@ var Jstal = function(template) {
         return engine._execute();
     };
 };
-
-$.get("/templates/snippet1.tal", function(data){
-    var test = new Jstal(data);
-    test["value"] = {
-        getContent: "alta, wasn stress"
-    };
-    test["title"] = "<b>hui</b>";
-    var html = test.execute();
-    $("body").html(html);
-});
-
-JstalEngine.prototype.attributes = function(){}
