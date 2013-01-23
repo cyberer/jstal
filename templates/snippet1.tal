@@ -1,0 +1,17 @@
+<div class="item" tal:repeat="value values">
+    <div class="title">
+    <span tal:condition="value/hasDate" tal:replace="value/getDate">
+      2008-10-06
+    </span>
+        <a href="sample.html"
+           tal:attributes="href value/getUrl"
+           tal:content="value/getTitle">
+            My item title
+        </a>
+    </div>
+    <div class="content" tal:content="value/getContent">
+        This is a sample content which is replaced by the
+        real content when the template is run with real
+        data.
+    </div>
+</div>
