@@ -14,4 +14,5 @@
         real content when the template is run with real
         data.
     </div>
+    <span tal:content="structure title"></span>
 </div>
